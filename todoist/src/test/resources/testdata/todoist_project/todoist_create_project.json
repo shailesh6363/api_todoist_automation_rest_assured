@@ -1,0 +1,12 @@
+{
+  "name": "API Automation Project",
+  "description": "RestAssured API Automation Project",
+
+  "color": {
+    "name": "charcoal",
+    "hex": "#808080",
+    "database_index": 47
+  },
+  "is_favorite": false,
+  "view_style": "string"
+}

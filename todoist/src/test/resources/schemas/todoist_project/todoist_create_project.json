@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "can_assign_tasks": {
+      "type": "boolean"
+    },
+    "child_order": {
+      "type": "number"
+    },
+    "color": {
+      "type": "string"
+    },
+    "creator_uid": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "is_archived": {
+      "type": "boolean"
+    },
+    "is_deleted": {
+      "type": "boolean"
+    },
+    "is_favorite": {
+      "type": "boolean"
+    },
+    "is_frozen": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "view_style": {
+      "type": "string"
+    },
+    "default_order": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "public_access": {
+      "type": "boolean"
+    },
+    "public_key": {
+      "type": "string"
+    },
+    "access": {
+      "type": "object",
+      "properties": {
+        "visibility": {
+          "type": "string"
+        },
+        "configuration": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      },
+      "required": [
+        "visibility",
+        "configuration"
+      ]
+    },
+    "role": {
+      "type": "string"
+    },
+    "parent_id": {},
+    "inbox_project": {
+      "type": "boolean"
+    },
+    "is_collapsed": {
+      "type": "boolean"
+    },
+    "is_shared": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "can_assign_tasks",
+    "child_order",
+    "color",
+    "creator_uid",
+    "created_at",
+    "is_archived",
+    "is_deleted",
+    "is_favorite",
+    "is_frozen",
+    "name",
+    "updated_at",
+    "view_style",
+    "default_order",
+    "description",
+    "public_access",
+    "public_key",
+    "access",
+    "role",
+    "parent_id",
+    "inbox_project",
+    "is_collapsed",
+    "is_shared"
+  ]
+}
