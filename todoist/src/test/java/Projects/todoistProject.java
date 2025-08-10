@@ -62,6 +62,19 @@ public class todoistProject {
         assertThat(project.getName(), equalTo("API Automation Project"));
         assertThat(project.getRole(), equalTo("CREATOR"));
 
+        Response deleteResponse=
+                given()
+                        .header("Authorization","Bearer "+ConfigManager.api_token)
+                        .header("Content-Type","application/json")
+                        .when()
+                        .delete(Endpoints.projectEndpoint+"/"+project.getId())
+                        .then()
+                        .assertThat()
+                        .statusCode(204)
+                        .extract()
+                        .response();
+        System.out.println(deleteResponse.statusCode());
+
     }
 
     @Test(description = "TC-02-Create a new Project with No project Name")
@@ -113,6 +126,23 @@ public class todoistProject {
                 .statusCode(200)
                 .extract()
                 .response();
+
+        JsonPath jsonPath = response.jsonPath();
+        String id = jsonPath.getString("id");
+        Response deleteResponse=
+                given()
+                        .header("Authorization","Bearer "+ConfigManager.api_token)
+                        .header("Content-Type","application/json")
+                        .when()
+                        .delete(Endpoints.projectEndpoint+"/"+id)
+                        .then()
+                        .assertThat()
+                        .statusCode(204)
+                        .extract()
+                        .response();
+        System.out.println(deleteResponse.statusCode());
+
+
 
     }
 
