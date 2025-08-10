@@ -1,99 +1,40 @@
 # Todoist API Automation Suite
 
-This project is an automated API testing suite for the **Todoist** project management API.  
-It is built using **Java**, **Maven**, **TestNG**, and **RestAssured**.  
-The suite validates various project creation scenarios, including:
+This project is an automated API testing suite for the Todoist project management API. It is built using Java, Maven, TestNG, and RestAssured. The suite validates various project creation scenarios, including successful creation, missing or invalid input, and authorization errors.
 
-- Successful project creation
-- Missing or invalid input
-- Authorization errors
+## Features
 
----
+- Automated API tests for Todoist endpoints
+- Data-driven testing using POJOs
+- TestNG for test orchestration
+- ExtentReports for detailed test reporting
+- Maven for build and dependency management
 
-## 📌 Features
+## Prerequisites
 
-- Automated API tests for **Todoist** endpoints
-- **Data-driven testing** using POJOs
-- **TestNG** for test orchestration
-- **ExtentReports** for detailed reporting
-- **Maven** for build and dependency management
+- Java 8 or higher
+- Maven 3.x
+- Internet connection (for accessing Todoist API)
 
----
+## Setup
 
-## 🔧 Prerequisites
+1. Clone the repository:
+2. Navigate to the project directory:
+3. Update the configuration in src/test/resources/config.properties with your Todoist API credentials:
+   - baseUrl: Base URL for Todoist API
+   - tokenUrl: OAuth token URL
+   - clientId: Your Todoist client ID
+   - clientSecret: Your Todoist client secret
+   - api_token: Your Todoist API token
 
-- **Java 21** or higher
-- **Maven 3.x**
-- **Internet connection** (for accessing Todoist API)
+## Running Tests
 
----
+To execute the test suite, run:
 
-## ⚙️ Setup
+## Reports
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/shailesh6363/api_todoist_automation_rest_assured
+After test execution, ExtentReports will be generated in the test-output directory.
 
-📂 Project Structure
-todoist-api-automation/
-│
-├── pom.xml                         # Maven dependencies and build config
-├── README.md                       # Project documentation
-│
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │   └── pojo                 # POJO classes for request/response
-│   │   └── resources                # Application resources if needed
-│   │
-│   └── test
-│       ├── java
-│       │   ├── tests                # Test classes for Todoist APIs
-│       │   ├── utils                # Utility classes (helpers, constants)
-│       │   └── base                 # Base test setup/config
-│       │
-│       └── resources
-│           ├── config.properties    # API credentials and configurations
-│           └── testdata             # Test data files (JSON, CSV, etc.)
-│
-└── test-output                      # ExtentReports output after execution
+## License
 
-
-
-🏗 Framework Architecture
-           ┌───────────────────────────┐
-           │       TestNG Runner        │
-           │   (test orchestration)     │
-           └─────────────┬─────────────┘
-                         │
-                         ▼
-               ┌─────────────────┐
-               │  Test Classes   │
-               │ (Todoist APIs)  │
-               └───────┬─────────┘
-                       │
-                       ▼
-        ┌────────────────────────────────┐
-        │      RestAssured Library        │
-        │ (HTTP Requests + Validations)   │
-        └─────────────┬──────────────────┘
-                      │
-                      ▼
-             ┌───────────────────┐
-             │   POJO Classes     │
-             │ (Request/Response) │
-             └─────────┬─────────┘
-                       │
-                       ▼
-              ┌────────────────────┐
-              │   Todoist API       │
-              │ (Live Endpoints)    │
-              └─────────┬──────────┘
-                        │
-                        ▼
-              ┌────────────────────┐
-              │  ExtentReports      │
-              │ (HTML Reports)      │
-              └────────────────────┘
-
-   
+This project is licensed under the MIT License. create readme.md file  please rephrase this
